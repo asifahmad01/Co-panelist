@@ -1,0 +1,54 @@
+#main-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#component-4, #outputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px; /* Adjusted to make it more rectangular */
+    height: 200px; /* Added to make it more rectangular */
+}
+
+button {
+    display: block;
+    margin: 5px auto; /* Reduced margin */
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 15px; /* Reduced font-size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#recordButton {
+    background-color: #3498db;
+}
+
+#recordButton:hover {
+    background-color: #2980b9;
+}
+
+#clearButton, #clearOutputButton {
+    background-color: #e74c3c;
+}
+
+#clearButton:hover, #clearOutputButton:hover {
+    background-color: #c0392b;
+}
+
+audio {
+    margin-top: 20px;
+}
+
+/* For the SVG in the record button */
+.record-icon {
+    fill: white;
+}

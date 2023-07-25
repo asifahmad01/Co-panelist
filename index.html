@@ -1,0 +1,148 @@
+ <!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Recorder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    #main-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+#component-4, #outputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 400px; /* Adjusted to make it more rectangular */
+    height: 200px; /* Added to make it more rectangular */
+}
+
+button {
+    display: block;
+    margin: 5px auto; /* Reduced margin */
+    padding: 5px 10px; /* Reduced padding */
+    font-size: 15px; /* Reduced font-size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+#recordButton {
+    background-color: #3498db;
+}
+
+#recordButton:hover {
+    background-color: #2980b9;
+}
+
+#clearButton, #clearOutputButton {
+    background-color: #e74c3c;
+}
+
+#clearButton:hover, #clearOutputButton:hover {
+    background-color: #c0392b;
+}
+
+audio {
+    margin-top: 20px;
+}
+
+/* For the SVG in the record button */
+.record-icon {
+    fill: white;
+}
+
+</style>
+<body>
+    <h1>Real-time AI-based Audio Transcription</h1>
+    <div id="main-container">
+        <div id="component-4" class="svelte-15lo0d8 unequal-height">      
+            <div id="component-9" class="svelte-vt1mxs gap panel">
+                <div class="form svelte-sfqy0y">
+                    <div id="component-2" class="block svelte-90oupt padded"> 
+                        <label class="svelte-1kcgrqr container">
+                            <span data-testid="block-info" class="svelte-1gfkn6j">Audio</span>
+                            <audio id="audioPlayback" controls></audio>
+                        </label>
+                    </div>
+                </div>
+                <div class="mic-wrap svelte-1thnwz">
+                    <button class="sm secondary svelte-1e89no8" id="recordButton">
+                        <span class="record-icon svelte-1thnwz">
+                            <span class="pinger svelte-1thnwz"></span> 
+                            <span class="dot svelte-1thnwz"></span>
+                        </span>
+                        Record
+                    </button>
+                    <div id="component-7" class="svelte-15lo0d8 stretch">
+                        <button class="lg secondary svelte-1e89no8" id="clearButton">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="outputContainer">
+            <pre id="output"></pre>
+            <button class="lg secondary svelte-1e89no8" id="clearOutputButton">Clear Output</button>
+        </div>
+    </div>
+    
+    <!-- Your existing JavaScript goes here -->
+
+    
+
+    
+
+
+
+   
+    <!-- <script>
+        let recordButton = document.getElementById('recordButton');
+        let clearButton = document.getElementById('clearButton');
+        let audioPlayback = document.getElementById('audioPlayback');
+
+        let chunks = [];
+        let recorder;
+        let audioStream;
+        
+        recordButton.onclick = async () => {
+            if (!recorder) {
+                const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+                audioStream = stream;
+                recorder = new MediaRecorder(stream);
+                
+                recorder.ondataavailable = (e) => chunks.push(e.data);
+
+                recorder.onstop = () => {
+                    let blob = new Blob(chunks, { type: 'audio/wav' });
+                    let url = window.URL.createObjectURL(blob);
+
+                    audioPlayback.src = url;
+
+                    chunks = [];
+                    recorder = null;
+                    audioStream = null;
+                };
+                
+                recorder.start();
+                recordButton.textContent = 'Stop recording';
+            } else {
+                recorder.stop();
+                audioStream.getTracks().forEach(track => track.stop());
+                recordButton.textContent = 'Record';
+            }
+        };
+
+        clearButton.onclick = () => {
+            audioPlayback.src = '';
+        };
+    </script>
+</body>
+</html> --> -->
